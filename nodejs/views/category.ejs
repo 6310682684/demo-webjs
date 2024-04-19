@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">   
+    <!-- Style -->
+    <link rel="stylesheet" href="style_table.css">
+</head>
+<body>
+    <!-- <div class="mid_page"> -->
+      <div class="content">
+    
+        <div class="container">
+        <h2 class="mb-5"> Category </h2>
+        <div class="table-responsive custom-table-responsive">
+          <table class="table custom-table">
+              <thead>
+                <tr>
+                  <th>Category ID</th>
+                  <th>Name</th>
+                  <th>Last Update</th>
+                  <th> Update Data </th>
+                  <th> Delete Data </th>
+                </tr>
+              </thead>
+              <tbody>
+                <% categories.forEach(category => { %>
+                  <tr>
+                    <td><%= category.category_id %></td>
+                    <td><%= category.name %></td>
+                    <td><%= category.last_update %></td>
+                    <td>
+                      <form action="/update" method="get">
+                        <input type="hidden" name="category_id" value="<%= category.category_id %>">
+                        <button type="submit">Update</button>
+                      </form>
+                    </td>  
+                    <td> 
+                      <form action="/delete" method="post">
+                        <input type="hidden" name="category_id" value="<%= category.category_id %>">
+                        <button type="submit">Delete</button>
+                      </form>
+                    </td>
+                  </tr> 
+                <% }); %> 
+              </tbody>
+          </table>
+        </div>
+ 
+        <form id="indexBtn" action="/index" method="get" style="padding-top: 2%;">
+          <input class="button"type="submit" value="Back to index" />
+        </form> 
+
+        <form id="insert_dataBtn" action="/insert_data" method="get" style="padding-top: 4%;">
+            <input class="button"type="submit" value="Add data" />
+          </form> 
+
+    </div>    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html> 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div class="main-container">
+    <div class="blur-circle1">
+  
+    </div>
+    <div class="blur-circle2">
+  
+    </div>
+      <!-- Start Landing Page -->
+  <div class="landing-page">
+    <header>
+      <div class="container">
+        <a class="logo">Khomchan S. <b>Intro Website</b></a>
+        <ul class="links">
+        
+          <form id="categoryForm" action="/category" method="get" >
+              <button type="submit" id="categoryBtn" class="button">Go to Database</button>
+          </form>
+          <li></li>
+          <form id="aboutBtn" action="/about" method="get" >
+            <input class="button"type="submit" value="About me" />
+          </form> 
+  
+        </ul>
+      </div>
+    </header>
+    <div class="content">
+      <div class="container">
+        <div class="info">
+          <h1>Random cat images</h1>
+          <p>Cats are cute and healing so we can watch'em all day (=^・・^=)</p>
+          <p>Click the load picture button to random some cat image</p>
+          <button type="button" id="load-more"> Load picture </button>
+        </div>
+        <div class="box">
+          <div class="card" id="card"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Landing Page -->
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
