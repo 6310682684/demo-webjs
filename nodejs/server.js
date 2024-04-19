@@ -3,7 +3,7 @@ const path = require('path');
 const { Pool } = require('pg');
 const bodyParser = require('body-parser');
 
-const hostaddr = '10.0.0.92';
+const hostaddr = '54.252.142.175';
 const hostname = '0.0.0.0';
 // const hostname = 'localhost';
 const port = 3300;
